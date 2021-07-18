@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Угадай слово</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <main>
+      <div class="buttons">
+        <button class="btn btn-keyboard">⌨️</button>
+        <img class="hidden keyboard" src="./images/keyboardRussian.png" alt="">
+        <a href="#" class="btn btn-back">🐛 НАЗАД</a>
+        <button class="btn btn--new">💚 Ещё раз</button>
+        <div title="Click to decide who will be player 1"><img class="dice"  src="./images/dice/dice-1.png" height="100px" alt=""></div>
+      </div>
+      <section class="pictures">
+      </section>
+      
+      <section class="players-wrapper">
+      <section class="players">
+        <section class="player player--0 player--active">
+          <div class="current">
+            <input class="current-label label-0" placeholder="ИГРОК 1">
+            <p class="current-score" id="current--0">0</p>
+          </div>
+        </section>
+        <section class="player player--1">
+          <div class="current">
+            <input class="current-label label-1" placeholder="ИГРОК 2">
+            <p class="current-score" id="current--1">0</p>
+          </div>
+        </section>
+      </section>
+    </section>
+      
+
+        <button class="btn btn-answer">👌 Ответ готов</button>
+        <input id="word" type="text" class="btn btn-input" onfocus="let value = this.value; this.value = null; this.value=value" placeholder="пиши слово тут">
+      </main>
+      <script>
+        
+        let wordBank = [
+        ['мама', `<img class="picture" src="./images/alphabet1/mom.png">`],
+        ['кот', `<img class="picture" src="./images/alphabet1/cat.png">`],
+        ['атом', `<img class="picture" src="./images/alphabet1/atom.png">`],
+        ['какао', `<img class="picture" src="./images/alphabet1/cocoa.png">`],
+        ['макака', `<img class="picture" src="./images/alphabet1/macaque.png">`],
+        ['мак', `<img class="picture" src="./images/alphabet1/poppy.png">`],
+        ['там', `<img class="picture" src="./images/alphabet1/there.png">`],
+        ['кто', `<img class="picture" src="./images/alphabet1/who.png">`],
+        ['тако', `<img class="picture" src="./images/alphabet1/taco.png">`],
+        ['кака', `<img class="picture" src="./images/alphabet1/kaka.png">`],
+        ['кома', `<img class="picture" src="./images/alphabet1/coma.png">`],
+        ['кот том', `<img class="picture" src="./images/alphabet1/catTom.png">`],
+    ]
+      </script>
+      <script src="script.js"></script>
+</body>
+</html>

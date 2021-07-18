@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Угадай слово</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <main>
+      <div class="buttons">
+        <button class="btn btn-keyboard">⌨️</button>
+        <img class="hidden keyboard" src="./images/keyboardRussian.png" alt="">
+
+        <a href="#" class="btn btn-back">🐛 НАЗАД</a>
+        <button class="btn btn--new">💚 Ещё раз</button>
+        <div title="Click to decide who will be player 1"><img class="dice"  src="./images/dice/dice-1.png" height="100px" alt=""></div>
+      </div>
+      <section class="pictures">
+      </section>
+      
+      <section class="players-wrapper">
+      <section class="players">
+        <section class="player player--0 player--active">
+          <div class="current">
+            <input class="current-label label-0" placeholder="ИГРОК 1">
+            <p class="current-score" id="current--0">0</p>
+          </div>
+        </section>
+        <section class="player player--1">
+          <div class="current">
+            <input class="current-label label-1" placeholder="ИГРОК 2">
+            <p class="current-score" id="current--1">0</p>
+          </div>
+        </section>
+      </section>
+    </section>
+      
+
+        <button class="btn btn-answer">👌 Ответ готов</button>
+        <input id="word" type="text" class="btn btn-input" onfocus="let value = this.value; this.value = null; this.value=value" placeholder="пиши слово тут">
+      </main>
+      <script>
+        
+        let wordBank = [
+        ['кока-кола', `<img class="picture" src="./images/alphabet3/coke.png">`],
+        ['крокодил', `<img class="picture" src="./images/alphabet3/crocodile.png">`],
+        ['лампа', `<img class="picture" src="./images/alphabet3/lamp.png">`],
+        ['лимон', `<img class="picture" src="./images/alphabet3/lemon.png">`],
+        ['панда', `<img class="picture" src="./images/alphabet3/panda.png">`],
+        ['паспорт', `<img class="picture" src="./images/alphabet3/passport.png">`],
+        ['рис', `<img class="picture" src="./images/alphabet3/rice.png">`],
+        ['солдат', `<img class="picture" src="./images/alphabet3/soldier.png">`],
+        ['суп', `<img class="picture" src="./images/alphabet3/soup.png">`],
+        ['свитер', `<img class="picture" src="./images/alphabet3/sweater.png">`],
+        ['лук', `<img class="picture" src="./images/alphabet3/onion.png">`],
+        ['клоун', `<img class="picture" src="./images/alphabet3/clown.png">`],
+        ['супермаркет', `<img class="picture" src="./images/alphabet3/supermarket.png">`],
+        ['авокадо', `<img class="picture" src="./images/alphabet3/avocado.png">`],
+        ['море', `<img class="picture" src="./images/alphabet3/sea.png">`],
+        ['дантист', `<img class="picture" src="./images/alphabet3/dantist.png">`],
+        ['попкорн', `<img class="picture" src="./images/alphabet3/popcorn.png">`],
+        ['ролл', `<img class="picture" src="./images/alphabet3/roll.png">`],
+        ['салат', `<img class="picture" src="./images/alphabet3/salad.png">`],
+        ['лотос', `<img class="picture" src="./images/alphabet3/lotos.png">`],
+        ['дракон', `<img class="picture" src="./images/alphabet3/dragon.png">`],
+        ['петух', `<img class="picture" src="./images/alphabet3/rooster.png">`],
+        ['улитка', `<img class="picture" src="./images/alphabet3/snail.png">`],
+        ['волк', `<img class="picture" src="./images/alphabet3/wolf.png">`],
+        ['винни-пух', `<img class="picture" src="./images/alphabet3/winnie-the-pooh.png">`],
+        ['киви', `<img class="picture" src="./images/alphabet3/kiwi.png">`],
+        ['пианино', `<img class="picture" src="./images/alphabet3/piano.png">`],
+        ['кит', `<img class="picture" src="./images/alphabet3/whale.png">`],
+        ['сосиска', `<img class="picture" src="./images/alphabet3/hot-dog-sausage.png">`],
+        ['вино', `<img class="picture" src="./images/alphabet3/wine.png">`],
+        ['сова и вино', `<img class="picture" src="./images/alphabet3/owl-wine.png">`],
+        ['кимоно', `<img class="picture" src="./images/alphabet3/kimono.png">`],
+
+    ]
+      </script>
+      <script src="script.js"></script>
+</body>
+</html>
